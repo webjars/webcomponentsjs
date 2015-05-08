@@ -66,9 +66,9 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <mkdir dir="${destDir}" />
-                                <get src="${upstream.url}/webcomponents.js" dest="${destDir}" />
-                                <get src="${upstream.url}/webcomponents-lite.js" dest="${destDir}" />
+                                <mkdir dir="${destDir}"/>
+                                <get src="${upstream.url}/webcomponents.js" dest="${destDir}"/>
+                                <get src="${upstream.url}/webcomponents-lite.js" dest="${destDir}"/>
                             </target>
                         </configuration>
                     </execution>
@@ -78,13 +78,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.5</version>
+                <version>2.5.1</version>
             </plugin>
 
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.2</version>
+                <version>1.6.5</version>
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>sonatype-nexus-staging</serverId>
