@@ -11,14 +11,14 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>webcomponentsjs</artifactId>
-    <version>0.7.23-SNAPSHOT</version>
+    <version>1.0.0-rc.11-SNAPSHOT</version>
     <name>webcomponents.js</name>
     <description>WebJar for webcomponents.js</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>0.7.22</upstream.version>
+        <upstream.version>1.0.0-rc.11</upstream.version>
         <upstream.url>https://raw.githubusercontent.com/webcomponents/webcomponentsjs/v${upstream.version}</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}</destDir>
         <requirejs>
@@ -67,10 +67,17 @@
                         <configuration>
                             <target>
                                 <mkdir dir="${destDir}" />
-                                <get src="${upstream.url}/webcomponents.js" dest="${destDir}" />
-                                <get src="${upstream.url}/webcomponents.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi-ce.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi-ce.js.map" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi-sd-ce.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi-sd-ce.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi.js.map" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-hi.js.map" dest="${destDir}" />
                                 <get src="${upstream.url}/webcomponents-lite.js" dest="${destDir}" />
-                                <get src="${upstream.url}/webcomponents-lite.min.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-lite.js.map" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-loader.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-sd-ce.js" dest="${destDir}" />
+                                <get src="${upstream.url}/webcomponents-sd-ce.js.map" dest="${destDir}" />
                             </target>
                         </configuration>
                     </execution>
